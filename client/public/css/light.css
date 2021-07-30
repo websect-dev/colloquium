@@ -1,0 +1,63 @@
+header {
+  color: #171717;
+}
+
+h3 {
+  color: #171717;
+}
+
+button, input[type=file] {
+  box-shadow: 0px 4px 40px rgba(185, 185, 185, 0.5);
+}
+
+.dropdown {
+  box-shadow: 0px 4px 40px rgba(185, 185, 185, 0.5);
+}
+.dropdown h1 {
+  color: #F33E69;
+}
+
+.start-container button {
+  background: #F33E69;
+}
+.start-container button:active {
+  box-shadow: 0px 4px 40px rgba(185, 185, 185, 0.8);
+}
+
+#additional-container h2 {
+  color: #CECECE;
+}
+#additional-container #upload-btn {
+  border: 3px solid #F33E69;
+  color: #F33E69;
+  box-shadow: 0px 4px 40px rgba(185, 185, 185, 0.5);
+}
+#additional-container #upload-btn:hover {
+  background: #f3f3f3;
+}
+
+.footer {
+  box-shadow: 0px 4px 40px rgba(185, 185, 185, 0.5);
+}
+.footer #footer__text-container a:hover {
+  color: #b8b7b7;
+}
+
+/* The slider */
+.slider {
+  background-color: #ccc;
+}
+
+.slider:before {
+  background-color: white;
+}
+
+input:checked + .slider {
+  background-color: #F33E69;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #F33E69;
+}
+
+/*# sourceMappingURL=light.css.map */

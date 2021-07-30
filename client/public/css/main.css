@@ -1,0 +1,204 @@
+html {
+  height: 100%;
+}
+
+#change-theme {
+  font-family: "Montserrat", sans-serif !important;
+  font-style: normal;
+  display: flex;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 3vw;
+  top: 3vh;
+  align-items: center;
+}
+body {
+  min-height: 100%;
+  padding: 3vw;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+header {
+  font-family: SF Pro Display, serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 3vw;
+  color: #171717;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif !important;
+  font-style: normal;
+  text-align: center;
+  margin: 3rem;
+  font-size: 1.5vw;
+  font-weight: lighter !important;
+  color: #171717 !important;
+}
+
+button, input[type=file] {
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6vh auto 10vh;
+  border-radius: 15px;
+  background: none !important;
+}
+.dropdown h1 {
+  font-family: SF Pro Display, bold, sans-serif;
+  font-size: 4.5rem;
+  text-align: center;
+  display: inline-block;
+  margin: 1rem 2rem;
+  padding: 1rem;
+}
+
+.start-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem;
+}
+.start-container button {
+  width: 25rem;
+  height: 5rem;
+  font-family: SF Pro Display, regular, monospace;
+  font-size: 25px;
+  color: white;
+  border-radius: 7px;
+}
+.start-container button:active {
+  box-shadow: 0px 4px 40px rgba(185, 185, 185, 0.8);
+  transform: translate(-1.5%, 2.5%);
+}
+
+#additional-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+#additional-container h2 {
+  font-family: "Montserrat", sans-serif !important;
+  font-style: normal;
+  font-size: small;
+  color: #CECECE;
+  align-items: center;
+  display: block;
+  margin: 2rem;
+}
+#additional-container #upload-btn {
+  font-family: "Montserrat", sans-serif !important;
+  font-style: normal;
+  font-size: small;
+  display: block;
+  width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 8px;
+}
+#additional-container #upload-btn input[type=file] {
+  display: none;
+}
+#additional-container #upload-btn:active {
+  transform: translate(-2.5%, 3.5%);
+}
+
+.footer {
+  margin-top: 5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  grid-row-start: 6;
+  grid-row-end: 6;
+}
+.footer #footer__text-container {
+  font-family: "Montserrat", sans-serif !important;
+  font-style: normal;
+  font-size: medium;
+  display: inline-flex;
+  align-items: center;
+}
+.footer #footer__text-container a {
+  color: gray;
+  margin: 1rem 1rem 1rem 2rem;
+}
+.footer #footer__text-container a:hover {
+  color: #b8b7b7;
+}
+.footer #footer__img-container {
+  display: inline-flex;
+  align-items: center;
+}
+.footer #footer__img-container a {
+  margin: 1rem 1rem 1rem 2rem;
+}
+.footer #footer__img-container a:hover {
+  transform: translate(2.5%, -7.5%);
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 5.4rem;
+  height: 2.8rem;
+  margin: 0 1rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=main.css.map */

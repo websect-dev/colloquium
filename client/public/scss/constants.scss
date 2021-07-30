@@ -1,0 +1,29 @@
+// ====================
+// COLORS
+// ====================
+$main-color: #F33E69;
+$light-color: #56BDDE;
+$dark-color: #d5f55f;
+
+$white: rgba(255, 255, 255, 0.75);
+$black: #171717;
+
+$light-shadow: 0px 4px 40px rgba(185, 185, 185, 0.5);
+$dark-shadow: 0px 4px 30px rgba(0, 0, 0, 0.27);
+
+$big-light-shadow: 0px 4px 40px rgba(185, 185, 185, 0.8);
+$big-dark-shadow: 2px 4px 30px rgba(10, 8, 8, 0.8);
+
+
+// ====================
+// FONTS
+// ====================
+@mixin header {
+  font-family: SF Pro Display, serif;
+  font-weight: bold;
+}
+
+@mixin regular-text {
+  font-family: 'Montserrat', sans-serif !important;
+  font-style: normal;
+}

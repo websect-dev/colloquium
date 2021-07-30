@@ -1,0 +1,82 @@
+@import "constants";
+
+header {
+  color: $black;
+}
+
+h3 {
+  color: $black;
+}
+
+button, input[type="file"] {
+  box-shadow: $light-shadow;
+}
+
+
+.dropdown {
+  box-shadow: $light-shadow;
+
+  & h1 {
+    color: $main-color;
+  }
+}
+
+.start-container {
+
+  & button {
+    background: $main-color;
+  }
+
+  & button:active {
+    box-shadow: $big-light-shadow;
+  }
+
+}
+
+#additional-container {
+
+  & h2 {
+    color: #CECECE;
+  }
+
+  & #upload-btn {
+    border: 3px solid  $main-color;
+    color:  $main-color;
+    box-shadow: $light-shadow;
+  }
+
+  & #upload-btn:hover {
+    background: #f3f3f3;
+  }
+
+}
+
+.footer {
+  box-shadow: $light-shadow;
+
+  & #footer__text-container {
+
+    & a:hover {
+      color: #b8b7b7;
+    }
+
+  }
+
+}
+
+/* The slider */
+.slider {
+  background-color: #ccc;
+}
+
+.slider:before {
+  background-color: white;
+}
+
+input:checked + .slider {
+  background-color: $main-color;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $main-color;
+}

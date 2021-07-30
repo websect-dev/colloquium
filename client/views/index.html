@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark light">
+    <!--Нужно для нормальной адаптивности-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Коллоквиум</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/light.css" id="theme-link">
+    <!--    Для шрифта SF   -->
+    <link href="//db.onlinewebfonts.com/c/3cff9206b4c8d578245ef1aaeeaf9e84?family=SF+Pro+Display" rel="stylesheet"
+          type="text/css"/>
+    <!--    Для шрифта Montserrat   -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        Добро пожаловать в <br> систему коллоквиумов ИТМО ✌️
+        <div id="change-theme">
+            <span>Тёмная тема</span>
+            <!-- Rounded switch -->
+            <label class="switch" id="theme-button" onclick="changeTheme();">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+    <h3>Чтобы начать штудирование, выберите предмет</h3>
+
+    <div class="dropdown">
+        <h1>Дискретная математика</h1>
+    </div>
+
+    <div class="start-container">
+        <button>Поехали!</button>
+    </div>
+
+    <div id="additional-container">
+        <h2>или можете загрузить свой файл...</h2>
+
+        <label id="upload-btn">
+            <input type="file"/>
+            Загрузить
+        </label>
+    </div>
+
+    <div class="footer">
+        <div id="footer__text-container">
+            <a href="#">О нас</a>
+            <a href="#">Отзыв</a>
+        </div>
+
+        <div id="footer__img-container">
+            <a href="https://www.instagram.com/dirty_lipa/" target="_blank"><img
+                    src="../public/assets/img/instagram.svg" alt="inst" width="25px">
+            </a>
+            <a href="https://github.com/websect-itmo" target="_blank"><img
+                    src="../public/assets/img/github.svg" alt="github" width="25px">
+            </a>
+        </div>
+    </div>
+    <script src="../public/js/theme.js"></script>
+</body>
+</html>
