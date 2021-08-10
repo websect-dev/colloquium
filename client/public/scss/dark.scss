@@ -1,15 +1,21 @@
 @import "constants";
 
 body {
-  background: $black !important;
+  background: $black;
 }
 
-header {
-  color: $white;
-}
+.grid-container {
 
-h3 {
-  color: $white !important;
+  & .grid-header {
+
+    & header {
+      color: $white;
+    }
+
+    & h3 {
+      color: $white!important;
+    }
+  }
 }
 
 button, input[type="file"] {
@@ -50,7 +56,7 @@ button, input[type="file"] {
   }
 }
 
-.footer {
+footer {
   box-shadow: $big-dark-shadow;
 
   & #footer__text-container {
