@@ -6,7 +6,7 @@
 
 # Текущая версия проекта
 
-![Коллок](https://user-images.githubusercontent.com/82240296/127651399-4fced90f-c4d7-46db-b86f-c72e12b89967.png)
+![Коллок](https://user-images.githubusercontent.com/82240296/128941876-34393c23-b54c-4e23-8be1-8567a18edd8f.gif)
 
 
 # TO DO
