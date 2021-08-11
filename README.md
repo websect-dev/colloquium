@@ -11,7 +11,6 @@
 - [ ] Бекенд
 > Пока все
 
-
 # Текущая версия проекта
 
 ## Разрешение монитора
@@ -22,3 +21,4 @@
 
 <img align="left" width="340" alt="Mobile light" src="https://user-images.githubusercontent.com/82240296/128943491-1b2231b7-2714-4969-872e-ab162cdcb331.png">
 <img align="right" width="340" alt="Mobile dark" src="https://user-images.githubusercontent.com/82240296/128943495-86111f84-7365-44ab-9f6d-b6a3b2d32025.png">
+
