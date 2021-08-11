@@ -30,7 +30,7 @@ a {
   }
 }
 
-.dropdown {
+#dropdown {
   //transition: all 0.2s ease-in-out;
   overflow: hidden;
   //margin:auto;
@@ -44,26 +44,25 @@ a {
   color: $main-color;
 }
 
-.menu {
+#menu {
   //height: 230px;
+  & li {
+    font-family: SF Pro Display, bold, sans-serif;
+    font-size: x-large;
+    text-align: left;
+    color: #B1B1B1;
+    margin: 1.5vh 1vw 1vh 3vw;
+    padding: 0.5vw;
+    border: none;
+    position: relative;
+    outline: none;
+  }
 }
 
-.menu li {
-  font-family: SF Pro Display, bold, sans-serif;
-  font-size: x-large;
-  text-align: left;
-  color: #B1B1B1;
-  margin: 1.5vh 1vw 1vh 3vw;
-  padding: 0.5vw;
-  border: none;
-  position: relative;
-  outline: none;
+#dropdown.closed #menu {
+  height: 0;
 }
 
-.dropdown.closed .menu {
-  height: 0px;
-}
-
-.dropdown.closed .icon span {
+#dropdown.closed .icon span {
   transform: rotate(180deg);
 }

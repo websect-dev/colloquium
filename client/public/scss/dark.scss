@@ -4,7 +4,7 @@ body {
   background: $black;
 }
 
-.grid-container {
+#grid-container {
 
   & .grid-header {
 
@@ -22,7 +22,7 @@ button, input[type="file"] {
   box-shadow: $dark-shadow;
 }
 
-.dropdown {
+#dropdown {
   box-shadow: $dark-shadow;
 
   & h1 {
@@ -30,7 +30,7 @@ button, input[type="file"] {
   }
 }
 
-.start-container {
+#start-container {
   & button {
     background: $main-color;
   }

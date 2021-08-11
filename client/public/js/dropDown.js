@@ -1,5 +1,5 @@
-const dropdown = document.querySelector('.dropdown')
-const startContainerLink = document.querySelector('.start-container')
+const dropdown = document.querySelector('#dropdown')
+const startContainerLink = document.querySelector('#start-container')
 const additionalContainerLink = document.querySelector('#additional-container')
 
 dropdown.addEventListener('click', () => {
