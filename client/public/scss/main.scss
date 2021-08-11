@@ -144,15 +144,19 @@ input, label {
     & button {
       width: 10rem;
       height: 3rem;
+      border-radius: 7px;
+      text-decoration: none;
       font-family: SF Pro Display, regular, monospace;
       font-size: large;
       color: white;
-      border-radius: 7px;
     }
 
     & button:active {
       box-shadow: $big-light-shadow;
       transform: translate(-1.5%, 2.5%);
+    }
+
+    & a {
     }
 
   }
