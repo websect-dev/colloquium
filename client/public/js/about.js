@@ -1,16 +1,17 @@
 const time = Date.now() * 5e-14
 
+const RED = 0xFF2954
+
 const heartInit = () => {
     const scene = new THREE.Scene()
     const renderer = new THREE.WebGLRenderer({antialias: true})
     renderer.setSize(window.innerWidth, window.innerHeight)
-    document.body.appendChild(renderer.domElement)
-
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
     camera.position.z = 20
+    scene.background = new THREE.Color('white');
 
-    const light = new THREE.HemisphereLight(0x4E27BD, 0xffffff, 1.2)
-    light.position.set(-2, 14, 4)
+    const light = new THREE.HemisphereLight(0x9E2954, 0xffffff, 1.5)
+    light.position.set(0, 20, 0)
     light.lookAt(0, 0, 0)
 
     const heartBody = new THREE.Shape()
@@ -32,12 +33,11 @@ const heartInit = () => {
         bevelSize: 1.2,
         bevelSegments: 5,
     };
-    const material = new THREE.MeshNormalMaterial({
-        color: 0xF33E69,
-        // emissive: 0x2a592a,
-        // specular: 0x9b20d6,
-        // emissiveIntensity: 0.5,
-        // reflectivity: 0.3
+    const material = new THREE.MeshPhongMaterial({
+        color: RED,
+        shininess: 30,
+        emissive: 0x0,
+        specular: 0x0
     });
     const heartFull = new THREE.ExtrudeGeometry(heartBody, extrudeSettings)
     const heart = new THREE.Mesh(heartFull, material)
@@ -47,12 +47,11 @@ const heartInit = () => {
 
     scene.add(light)
     scene.add(heart)
+    document.body.appendChild(renderer.domElement)
 
     const animate = function () {
         requestAnimationFrame( animate )
-        heart.rotation.x += time * 0.2
-        heart.rotation.y += time * 0.3
-        heart.rotation.z += time * 0.1
+        heart.rotation.y += 0.01
         renderer.render(scene, camera)
     };
 

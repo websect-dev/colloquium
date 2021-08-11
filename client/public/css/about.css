@@ -1,4 +1,6 @@
-body {
-  margin: 0; }
+body, canvas {
+  margin: 0;
+  background: white;
+}
 
 /*# sourceMappingURL=about.css.map */

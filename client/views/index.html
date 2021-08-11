@@ -12,16 +12,14 @@
     <link rel="stylesheet" href="../public/css/main.css">
     <link rel="stylesheet" href="../public/css/dropDown.css">
     <link rel="stylesheet" type="text/css" href="../public/css/light.css" id="theme-link">
-    <!--    Для шрифта SF   -->
+    <link rel="stylesheet" href="../public/css/media.css">
     <link href="//db.onlinewebfonts.com/c/3cff9206b4c8d578245ef1aaeeaf9e84?family=SF+Pro+Display" rel="stylesheet"
           type="text/css"/>
-    <!--    Для шрифта Montserrat   -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 <body>
-<div class="grid-container">
-
+<div id="grid-container">
     <div class="grid-header">
         <header>
             Добро пожаловать в <br> систему коллоквиумов ИТМО ✌️
@@ -41,18 +39,30 @@
         <h3>Чтобы начать штудирование, выберите предмет</h3>
     </div>
 
-    <div class="grid-main-content">
-        <div class="dropdown closed">
+    <div id="grid-main-content">
+        <div id="dropdown" class="closed">
             <h1>Дискретная математика
-                <svg id="arrow" width="42" height="25" viewBox="0 0 42 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg id="arrow" width="42" height="25" viewBox="0 0 42 25" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M39 22L21.439 5L3 22" stroke="#E61E4E" stroke-width="7"/>
                 </svg>
             </h1>
 
-            <ul class="menu">
-                <li><a href="#"><span data-content="Линейная алгебра">Линейная алгебра</span></a></li>
-                <li><a href="#"><span data-content="Математический анализ">Математический анализ</span></a></li>
-                <li><a href="#"><span data-content="Очень важный предмет">Очень важный предмет</span></a></li>
+            <ul id="menu">
+                <li>
+                    <a href="#">
+                        <span data-content="Линейная алгебра">Линейная алгебра</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span data-content="Математический анализ">Математический анализ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><span data-content="Очень важный предмет">Очень важный предмет</span>
+                    </a>
+                </li>
                 <li id="menu-square"><a href="#" onclick="alert('Пососи')">
                     <svg width="23" height="23" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0H12.5V5H5V12.5H0V0ZM22.5 0H35V12.5H30V5H22.5V0ZM30 22.5H35V35H22.5V30H30V22.5ZM12.5 30V35H0V22.5H5V30H12.5Z"
@@ -62,7 +72,7 @@
             </ul>
         </div>
 
-        <div class="start-container">
+        <div id="start-container">
             <button>Поехали!</button>
         </div>
 
@@ -76,7 +86,7 @@
         </div>
     </div>
 
-    <div class="grid-footer">
+    <div id="grid-footer">
         <footer>
             <div id="footer__text-container">
                 <a href="#">О нас</a>
