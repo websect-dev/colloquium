@@ -10,40 +10,53 @@ body {
 }
 
 button, input[type=file] {
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.27);
+          box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.27);
 }
 
 #dropdown {
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.27);
+          box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.27);
+}
+#dropdown:hover {
+  background: #1E1E1E;
 }
 #dropdown h1 {
   color: #f33e69;
 }
 
-#start-container button {
-  background: #f33e69;
-}
-#start-container button:active {
-  box-shadow: 2px 4px 30px rgba(10, 8, 8, 0.8);
-}
-
 #additional-container h2 {
-  color: #CECECE;
+  color: #848484;
 }
 #additional-container #upload-btn {
-  border: 3px solid #f33e69;
-  color: #f33e69;
-  box-shadow: 2px 4px 30px rgba(10, 8, 8, 0.8);
+  -webkit-box-shadow: 2px 4px 30px rgba(10, 8, 8, 0.8);
+          box-shadow: 2px 4px 30px rgba(10, 8, 8, 0.8);
+  -webkit-transition: all 200ms cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  -o-transition: all 200ms cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 200ms cubic-bezier(0.4, 0.01, 0.165, 0.99);
 }
 #additional-container #upload-btn:hover {
   background: #333333;
 }
 
 footer {
-  box-shadow: 2px 4px 30px rgba(10, 8, 8, 0.8);
+  -webkit-box-shadow: 2px 4px 30px rgba(10, 8, 8, 0.8);
+          box-shadow: 2px 4px 30px rgba(10, 8, 8, 0.8);
+}
+footer #footer__text-container a {
+  color: #848484;
 }
 footer #footer__text-container a:hover {
-  color: #b8b7b7;
+  color: #CACACA;
+}
+footer #footer__img-container a:nth-child(1) {
+  background-color: #848484;
+}
+footer #footer__img-container a:nth-child(2) {
+  background-color: #848484;
+}
+footer #footer__img-container a:hover {
+  background-color: #CACACA;
 }
 
 /* The slider */
@@ -60,7 +73,8 @@ input:checked + .slider {
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #f33e69;
+  -webkit-box-shadow: 0 0 1px #f33e69;
+          box-shadow: 0 0 1px #f33e69;
 }
 
-/*# sourceMappingURL=dark.css.map */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Njc3MvZGFyay5zY3NzIiwiLi4vc2Nzcy9jb25zdGFudHMuc2NzcyIsIi4uL3RlbXAtY3NzL2RhcmsuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0UsbUJDWU07QUNiUjs7QUZRSTtFQUNFLGdDQ0dFO0FDUlI7QUZRSTtFQUNFLDJDQUFBO0FFTk47O0FGV0E7RUFDRSxvRENFWTtVREZaLDRDQ0VZO0FDVmQ7O0FGV0E7RUFDRSxvRENGWTtVREVaLDRDQ0ZZO0FDTmQ7QUZTRTtFQUNFLG1CQ3BCd0I7QUNhNUI7QUZTRTtFQUNFLGNDM0JTO0FDb0JiOztBRllFO0VBQ0UsY0NoQmtCO0FDT3RCO0FGWUU7RUFDRSxvRENkYztVRGNkLDRDQ2RjO0VBc0JoQixrRUFBQTtFQUFBLDZEQUFBO0VBQUEsMERBQUE7QUNqQkY7QUZXSTtFQUNFLG1CQUFBO0FFVE47O0FGY0E7RUFDRSxvREN2QmdCO1VEdUJoQiw0Q0N2QmdCO0FDWWxCO0FGYUk7RUFDRSxjQ2hDZ0I7QUNxQnRCO0FGWU07RUFDRSxjQ3JDUztBQzJCakI7QUZnQkk7RUFDRSx5QkN6Q2dCO0FDMkJ0QjtBRmlCSTtFQUNFLHlCQzdDZ0I7QUM4QnRCO0FGa0JJO0VBQ0UseUJDcERXO0FDb0NqQjs7QUZxQkEsZUFBQTtBQUNBO0VBQ0Usc0JBQUE7QUVsQkY7O0FGcUJBO0VBQ0UsdUJBQUE7QUVsQkY7O0FGcUJBO0VBQ0UseUJDakZXO0FDK0RiOztBRnFCQTtFQUNFLG1DQUFBO1VBQUEsMkJBQUE7QUVsQkYiLCJmaWxlIjoiZGFyay5jc3MifQ== */

@@ -64,16 +64,11 @@ input, label {
       align-items: center;
 
       & a {
-        color: gray;
         margin: 1vw 1vw 1vw 2vw;
         white-space: nowrap;
         text-decoration: none;
+        @include animationHover;
       }
-
-      & a:hover {
-        color: #b8b7b7;
-      }
-
     }
 
     & #footer__img-container {
@@ -82,10 +77,17 @@ input, label {
 
       & a {
         margin: 1vw 1vw 1vw 2vw;
-      }
+        width: 25px;
+        height: 25px;
+        @include animationHover;
 
-      & a:hover {
-        transform: translate(2.5%, -7.5%);
+        &:nth-child(1) {
+          mask: url("/assets/img/instagram.svg") no-repeat center / contain;
+        }
+
+        &:nth-child(2) {
+          mask: url("/assets/img/github.svg") no-repeat center / contain;
+        }
       }
 
     }
@@ -107,14 +109,10 @@ input, label {
     & h2 {
       @include regular-text;
       font-size: small;
-      color: #CECECE;
+      font-weight: 500;
       align-items: center;
       display: block;
       margin: 1rem;
-    }
-
-    & #upload-btn:active {
-      transform: translate(-2.5%, 3.5%);
     }
 
   }
@@ -122,12 +120,17 @@ input, label {
   & #additional-container #upload-btn {
     @include regular-text;
     font-size: small;
-    display: block;
-    width: 5rem;
+    width: 6rem;
+    height: 1.4rem;
     margin-left: auto;
+    border: 4px solid $main-color;
+    color: $main-color;
     margin-right: auto;
     text-align: center;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     input[type="file"] {
       display: none;
@@ -140,21 +143,21 @@ input, label {
   }
 
   #start-container {
-
     & button {
       width: 10rem;
+      background: $main-color;
       height: 3rem;
+      border-radius: 7px;
+      text-decoration: none;
       font-family: SF Pro Display, regular, monospace;
       font-size: large;
       color: white;
-      border-radius: 7px;
-    }
+      @include animationHover;
 
-    & button:active {
-      box-shadow: $big-light-shadow;
-      transform: translate(-1.5%, 2.5%);
+      &:hover {
+        background: $hover-go-color;
+      }
     }
-
   }
 
   & #dropdown {
@@ -167,7 +170,8 @@ input, label {
     margin-right: auto;
 
     border-radius: 15px;
-
+    @include animationHover;
+    
     & h1 {
       font-family: SF Pro Display, bold, sans-serif;
       font-size: xx-large;

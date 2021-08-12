@@ -24,45 +24,50 @@ button, input[type="file"] {
 
 #dropdown {
   box-shadow: $dark-shadow;
-
+  &:hover {
+    background: $hover-dropdown-dark-color;
+  }
   & h1 {
     color: $main-color;
   }
 }
 
-#start-container {
-  & button {
-    background: $main-color;
-  }
-
-  & button:active {
-    box-shadow: $big-dark-shadow;
-  }
-}
-
 #additional-container {
   & h2 {
-    color: #CECECE;
+    color: $inactive-dark-color;
   }
 
   & #upload-btn {
-    border: 3px solid $main-color;
-    color: $main-color;
     box-shadow: $big-dark-shadow;
-  }
-
-  & #upload-btn:hover {
-    background: #333333;
+    @include animationHover;
+    &:hover {
+      background: #333333;
+    }
   }
 }
 
 footer {
   box-shadow: $big-dark-shadow;
-
   & #footer__text-container {
+    & a {
+      color: $inactive-dark-color;
+      &:hover {
+        color: $inactive-color;
+      }
+    }
+  }
 
-    & a:hover {
-      color: #b8b7b7;
+  & #footer__img-container a {
+    &:nth-child(1) {
+      background-color: $inactive-dark-color;
+    }
+
+    &:nth-child(2) {
+      background-color: $inactive-dark-color;
+    }
+
+    &:hover {
+      background-color: $inactive-color;
     }
   }
 }

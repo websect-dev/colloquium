@@ -1,10 +1,10 @@
 const link = document.getElementById("theme-link");
 const moonLink = document.getElementById("mobile-change-theme");
-const lightTheme = "../public/css/dark.css";
-const darkTheme = "../public/css/light.css";
+const lightTheme = "css/dark.css";
+const darkTheme = "css/light.css";
 
-const lightMoonTheme = "../public/assets/img/light-moon.svg";
-const darkMoonTheme = "../public/assets/img/dark-moon.svg";
+const lightMoonTheme = "assets/img/light-moon.svg";
+const darkMoonTheme = "assets/img/dark-moon.svg";
 
 let i = 0;
 
