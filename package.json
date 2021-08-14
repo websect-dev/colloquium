@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/app.js",
-    "serve": "nodemon server/app.js"
+    "server": "nodemon server/app.js",
+    "prefix": "postcss ./client/public/temp-css/main.css ./client/public/temp-css/dark.css ./client/public/temp-css/dropDown.css ./client/public/temp-css/light.css ./client/public/temp-css/about.css ./client/public/temp-css/media.css --use autoprefixer -d ./client/public/css/",
+    "run": "concurrently \"npm run server\" \"npm run prefix\""
   },
   "keywords": [],
   "author": "Mikhail Libchenko & Alex Miroshnichenko",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",

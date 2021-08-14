@@ -2,14 +2,25 @@
 // COLORS
 // ====================
 $main-color: #f33e69;
-$hover-color: #FC134A;
+
+$hover-go-color: #C8234A;
+
+$hover-dropdown-color: #F5F5F5;
+$hover-dropdown-dark-color: #1E1E1E;
+
 $light-color: #56BDDE;
-$selection-color: #67AAA6;
+$selection-color: #13627A;
+
 $dark-color: #d5f55f;
 
 $light-main-color: rgba(243, 62, 105, 0.85);
 $white: rgba(255, 255, 255, 0.95);
 $black: #171717;
+
+$inactive-color: #CACACA;
+$inactive-hover-color: #656565;
+
+$inactive-dark-color: #848484;
 
 $light-shadow: 0px 4px 40px rgba(185, 185, 185, 0.5);
 $dark-shadow: 0px 4px 30px rgba(0, 0, 0, 0.27);
@@ -17,6 +28,11 @@ $dark-shadow: 0px 4px 30px rgba(0, 0, 0, 0.27);
 $big-light-shadow: 0px 4px 40px rgba(185, 185, 185, 0.8);
 $big-dark-shadow: 2px 4px 30px rgba(10, 8, 8, 0.8);
 
+
+// ====================
+// OTHER
+// ====================
+$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 
 // ====================
 // FONTS
@@ -29,4 +45,8 @@ $big-dark-shadow: 2px 4px 30px rgba(10, 8, 8, 0.8);
 @mixin regular-text {
   font-family: 'Montserrat', sans-serif !important;
   font-style: normal;
+}
+
+@mixin animationHover {
+  transition: all 200ms $cubic;
 }
