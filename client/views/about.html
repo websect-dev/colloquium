@@ -6,6 +6,7 @@
     <meta name="color-scheme" content="dark light">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/preloader.css">
     <link rel="stylesheet" type="text/css" href="css/light.css" id="theme-link">
     <link href="//db.onlinewebfonts.com/c/3cff9206b4c8d578245ef1aaeeaf9e84?family=SF+Pro+Display" rel="stylesheet"
             type="text/css"/>
@@ -15,7 +16,15 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
+    <script>
+        window.onload = () => {
+            document.querySelector('.preloader').classList.add("preloader-remove")
+        }
+    </script>
     <script type="text/javascript" src="js/three.min.js"></script>
     <script type="text/javascript" src="js/about.js"></script>
+
+
 </body>
 </html>

@@ -6,10 +6,25 @@
 
     <!--Иконка сайта во вкладках-->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/preloader.css">
 </head>
 <body>
 
     <h1>Коллок</h1>
+
+    <div class="preloader">
+        <svg viewBox="-2000 -1000 4000 2000">
+            <path id="inf" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
+            <use xlink:href="#inf" stroke-dasharray="1570 5143" stroke-dashoffset="6713px"></use>
+        </svg>
+    </div>
+
+    <script>
+        window.onload = () => {
+            document.querySelector('.preloader').classList.add("preloader-remove")
+        }
+    </script>
 
 </body>
 </html>

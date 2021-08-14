@@ -5,11 +5,12 @@
     <meta name="color-scheme" content="dark light">
     <!--Нужно для нормальной адаптивности-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="height=device-height, initial-scale=1">
+
     <title>Коллоквиум</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/preloader.css">
     <link rel="stylesheet" href="css/dropDown.css">
     <link rel="stylesheet" type="text/css" href="css/light.css" id="theme-link">
     <link rel="stylesheet" href="css/media.css">
@@ -110,6 +111,19 @@
         </div>
 
     </div>
+
+    <div class="preloader">
+        <svg viewBox="-2000 -1000 4000 2000">
+            <path id="inf" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
+            <use xlink:href="#inf" stroke-dasharray="1570 5143" stroke-dashoffset="6713px"></use>
+        </svg>
+    </div>
+
+    <script>
+        window.onload = () => {
+            document.querySelector('.preloader').classList.add("preloader-remove")
+        }
+    </script>
 
     <script src="js/theme.js"></script>
     <script src="js/dropDown.js"></script>
