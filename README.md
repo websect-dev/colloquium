@@ -30,7 +30,7 @@
 
 ### Разрешение монитора
 
-![Kollok](https://user-images.githubusercontent.com/82240296/129115548-c715c862-235e-4682-9976-43ecbc5679f2.gif)
+![Коллок](https://user-images.githubusercontent.com/82240296/129651461-1477486b-fa8f-4fee-9275-2e6bb84be5f8.gif)
 
 ### Разрешение телефона
 
