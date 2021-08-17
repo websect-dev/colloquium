@@ -8,7 +8,8 @@ input, label {
   display: grid;
   grid-template-columns: 100%;
   grid-gap: 1vh;
-  grid-template-rows: minmax(25vh, auto) minmax(50vh, auto) minmax(20vh, auto); }
+  grid-template-rows: minmax(25vh, auto) minmax(50vh, auto) minmax(20vh, auto);
+  z-index: 2; }
   #grid-container .grid-header {
     display: flex;
     flex-direction: column;
@@ -82,25 +83,10 @@ input, label {
       font-size: small;
       font-weight: 500;
       align-items: center;
-      display: block;
+      justify-content: center;
+      align-content: center;
+      display: flex;
       margin: 1rem; }
-  #grid-main-content #additional-container #upload-btn {
-    font-family: 'Montserrat', sans-serif !important;
-    font-style: normal;
-    font-size: small;
-    width: 6rem;
-    height: 1.4rem;
-    margin-left: auto;
-    border: 4px solid #f33e69;
-    color: #f33e69;
-    margin-right: auto;
-    text-align: center;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    #grid-main-content #additional-container #upload-btn input[type="file"] {
-      display: none; }
   #grid-main-content button, #grid-main-content input[type="file"] {
     border: none;
     cursor: pointer; }

@@ -8,11 +8,16 @@
     <title>Коллоквиум</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="" id="dragFileForm">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/preloader.css">
     <link rel="stylesheet" href="css/dropDown.css">
-    <link rel="stylesheet" type="text/css" href="css/light.css" id="theme-link">
+    <link rel="stylesheet" href="css/uploadBtn.css">
+    <link rel="stylesheet" href="css/notification.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" type="text/css" href="css/light.css" id="theme-link">
+
     <link href="//db.onlinewebfonts.com/c/3cff9206b4c8d578245ef1aaeeaf9e84?family=SF+Pro+Display" rel="stylesheet"
           type="text/css"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -85,10 +90,13 @@
             <div id="additional-container">
                 <h2>или можете загрузить свой файл...</h2>
 
-                <label id="upload-btn">
-                    <input type="file"/>
-                    Загрузить
-                </label>
+                <form id="upload-btn" method="POST" onmouseenter="hideStart(); showSpan()" onmouseleave="showStart(); hideSpan()">
+                    <div>
+                        <input id="file-input" type="file" name="file" multiple>
+                        <label id="upload-label" for="file-input" onclick="setTimeout(() => showNotification(), 3000)">Загрузить</label>
+                        <span id="upload-span" style="display: none">можете перетащить файл сюда, и появится окно для загрузки файлов</span>
+                    </div>
+                </form>
             </div>
         </div>
         <div id="grid-footer">
@@ -114,13 +122,49 @@
         </svg>
     </div>
 
+    <div id="file-upload__modal" style="display: none">
+        <div id="file-upload__content">
+            <h1 class="file-upload__content-title" role="heading">Загрузить файл</h1>
+            <p class="file-upload__error" role="alertdialog"></p>
+            <ul class="file__list js-file__list" role="list"></ul>
+
+            <form class="file-upload__form js-dropzone" role="form">
+                <input
+                        type="file"
+                        id="file-dropzone"
+                        class="file__input js-file__input"
+                        multiple
+                >
+                <label
+                        class="file__input-label"
+                        for="file-dropzone"
+                >Перетащите файл или нажмите
+                    <button class="file__input-label-button" role="button">загрузить</button>
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <div class="container notification" style="display: none">
+        <div class="rectangle">
+            <div class="notification-text">
+                <span>Файл успешно обработан</span>
+            </div>
+        </div>
+    </div>
+
     <script>
         window.onload = () => {
             document.querySelector('.preloader').classList.add("preloader-remove")
         }
     </script>
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
     <script src="js/theme.js"></script>
+    <script src="js/uploadBtn.js"></script>
     <script src="js/dropDown.js"></script>
+    <script src="js/dragFile.js"></script>
+    <script src="js/notification.js"></script>
 </body>
 </html>
