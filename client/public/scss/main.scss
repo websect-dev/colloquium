@@ -1,5 +1,9 @@
 @import "constants";
 
+html, body {
+  overflow-y: hidden; // запрет скроллинга страницы
+}
+
 input, label {
   cursor: pointer;
 }

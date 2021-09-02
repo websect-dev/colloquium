@@ -1,5 +1,5 @@
 #upload-btn {
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
   font-style: normal;
   font-size: small;
   width: 6rem;
@@ -18,73 +18,10 @@
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
-  #upload-btn:hover {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 30rem;
-    height: 14rem;
-    background-color: rgba(243, 62, 105, 0.4) !important;
-    font-size: xx-large;
-    border: dashed; }
-  #upload-btn input[type="file"] {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    position: absolute;
-    z-index: -10; }
-  #upload-btn label:hover {
-    cursor: pointer;
-    text-decoration: underline; }
-
-#upload-btn img {
-  width: 40%;
-  margin-bottom: 20px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-mask: url("../assets/img/upload.svg") no-repeat center/contain;
-          mask: url("../assets/img/upload.svg") no-repeat center/contain; }
-
-#upload-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-
-#upload-span {
-  display: flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: large;
-  text-align: center;
-  margin: 2rem 1rem -4.7rem;
-  text-decoration: none !important; }
-
-#upload-btn div {
-  position: relative;
-  z-index: 10; }
-
-#upload-btn.opened {
+          align-items: center;
+  overflow: hidden;
+}
+#upload-btn.open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,31 +36,57 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 30rem;
-  height: 14rem;
+  height: 15rem;
   background-color: rgba(243, 62, 105, 0.4) !important;
   font-size: xx-large;
-  border: dashed; }
+  border: dashed;
+}
+#upload-btn input[type=file] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  position: absolute;
+  z-index: -10;
+}
+#upload-btn label:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+#upload-btn img {
+  width: 40%;
+  margin-bottom: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-mask: url("../assets/img/upload.svg") no-repeat center/contain;
+          mask: url("../assets/img/upload.svg") no-repeat center/contain;
+}
+#upload-btn div {
+  position: relative;
+  z-index: 10;
+}
+#upload-label {
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none !important;
+}
 
-#upload-btn.closed {
-  font-family: 'Montserrat', sans-serif !important;
-  font-style: normal;
-  font-size: small;
-  width: 6rem;
-  height: 1.4rem;
-  margin-left: auto;
-  border: 4px solid #f33e69;
-  color: #f33e69;
-  margin-right: auto;
-  text-align: center;
-  border-radius: 8px;
+#upload-span {
+  display: flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  font-size: large;
+  text-align: center;
+  margin: 2rem 1rem -4.7rem;
+  text-decoration: none !important;
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Njc3MvdXBsb2FkQnRuLnNjc3MiLCIuLi9zY3NzL2NvbnN0YW50cy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VDNENFLGdEQUFnRDtFQUNoRCxrQkFBa0I7RUQzQ2xCLGdCQUFnQjtFQUNoQixXQUFXO0VBQ1gsY0FBYztFQUNkLGlCQUFpQjtFQUNqQix5QkFBNkI7RUFDN0IsY0NOa0I7RURPbEIsa0JBQWtCO0VBQ2xCLGtCQUFrQjtFQUNsQixrQkFBa0I7RUFDbEIsb0JBQWE7RUFBYixvQkFBYTtFQUFiLGFBQWE7RUFDYix3QkFBdUI7TUFBdkIscUJBQXVCO1VBQXZCLHVCQUF1QjtFQUN2Qix5QkFBbUI7TUFBbkIsc0JBQW1CO1VBQW5CLG1CQUFtQixFQUFBO0VBRW5CO0lBQ0Usb0JBQWE7SUFBYixvQkFBYTtJQUFiLGFBQWE7SUFDYix3QkFBdUI7UUFBdkIscUJBQXVCO1lBQXZCLHVCQUF1QjtJQUN2Qix5QkFBbUI7UUFBbkIsc0JBQW1CO1lBQW5CLG1CQUFtQjtJQUNuQiw0QkFBc0I7SUFBdEIsNkJBQXNCO1FBQXRCLDBCQUFzQjtZQUF0QixzQkFBc0I7SUFDdEIsWUFBWTtJQUNaLGFBQWE7SUFDYixvREFBbUQ7SUFDbkQsbUJBQW1CO0lBQ25CLGNBQWMsRUFBQTtFQUdoQjtJQUVFLFlBQVk7SUFDWixhQUFhO0lBQ2IsVUFBVTtJQUNWLGtCQUFrQjtJQUNsQixZQUFZLEVBQUE7RUFHZDtJQUNFLGVBQWU7SUFDZiwwQkFBMEIsRUFBQTs7QUFJOUI7RUFDRSxVQUFVO0VBQ1YsbUJBQW1CO0VBQ25CLHlCQUFpQjtLQUFqQixzQkFBaUI7TUFBakIscUJBQWlCO1VBQWpCLGlCQUFpQjtFQUNqQixzRUFBOEQ7VUFBOUQsOERBQThELEVBQUE7O0FBR2hFO0VBQ0Usb0JBQWE7RUFBYixvQkFBYTtFQUFiLGFBQWE7RUFDYiw0QkFBc0I7RUFBdEIsNkJBQXNCO01BQXRCLDBCQUFzQjtVQUF0QixzQkFBc0I7RUFDdEIseUJBQW1CO01BQW5CLHNCQUFtQjtVQUFuQixtQkFBbUIsRUFBQTs7QUFHckI7RUFDRSxhQUFhO0VBQ2Isb0JBQW9CO0VBQ3BCLG9CQUFvQjtFQUNwQixhQUFhO0VBQ2IsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIsZ0NBQWdDLEVBQUE7O0FBR2xDO0VBQ0Usa0JBQWtCO0VBQ2xCLFdBQVcsRUFBQTs7QUFPYjtFQUNFLG9CQUFhO0VBQWIsb0JBQWE7RUFBYixhQUFhO0VBQ2Isd0JBQXVCO01BQXZCLHFCQUF1QjtVQUF2Qix1QkFBdUI7RUFDdkIseUJBQW1CO01BQW5CLHNCQUFtQjtVQUFuQixtQkFBbUI7RUFDbkIsNEJBQXNCO0VBQXRCLDZCQUFzQjtNQUF0QiwwQkFBc0I7VUFBdEIsc0JBQXNCO0VBQ3RCLFlBQVk7RUFDWixhQUFhO0VBQ2Isb0RBQW1EO0VBQ25ELG1CQUFtQjtFQUNuQixjQUFjLEVBQUE7O0FBR2hCO0VDM0NFLGdEQUFnRDtFQUNoRCxrQkFBa0I7RUQ0Q2xCLGdCQUFnQjtFQUNoQixXQUFXO0VBQ1gsY0FBYztFQUNkLGlCQUFpQjtFQUNqQix5QkFBNkI7RUFDN0IsY0M3RmtCO0VEOEZsQixrQkFBa0I7RUFDbEIsa0JBQWtCO0VBQ2xCLGtCQUFrQjtFQUNsQixvQkFBYTtFQUFiLG9CQUFhO0VBQWIsYUFBYTtFQUNiLHdCQUF1QjtNQUF2QixxQkFBdUI7VUFBdkIsdUJBQXVCO0VBQ3ZCLHlCQUFtQjtNQUFuQixzQkFBbUI7VUFBbkIsbUJBQW1CLEVBQUEiLCJmaWxlIjoidXBsb2FkQnRuLmNzcyJ9 */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Njc3MvdXBsb2FkQnRuLnNjc3MiLCIuLi9zY3NzL2NvbnN0YW50cy5zY3NzIiwiLi4vdGVtcC1jc3MvdXBsb2FkQnRuLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQzRDRSxnREFBQTtFQUNBLGtCQUFBO0VEM0NBLGdCQUFBO0VBQ0EsV0FBQTtFQUNBLGNBQUE7RUFDQSxpQkFBQTtFQUNBLHlCQUFBO0VBQ0EsY0NOVztFRE9YLGtCQUFBO0VBQ0Esa0JBQUE7RUFDQSxrQkFBQTtFQUNBLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0Esd0JBQUE7TUFBQSxxQkFBQTtVQUFBLHVCQUFBO0VBQ0EseUJBQUE7TUFBQSxzQkFBQTtVQUFBLG1CQUFBO0VBRUEsZ0JBQUE7QUVERjtBRkdFO0VBQ0Usb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSx3QkFBQTtNQUFBLHFCQUFBO1VBQUEsdUJBQUE7RUFDQSx5QkFBQTtNQUFBLHNCQUFBO1VBQUEsbUJBQUE7RUFDQSw0QkFBQTtFQUFBLDZCQUFBO01BQUEsMEJBQUE7VUFBQSxzQkFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0Esb0RBQUE7RUFDQSxtQkFBQTtFQUNBLGNBQUE7QUVESjtBRklFO0VBRUUsWUFBQTtFQUNBLGFBQUE7RUFDQSxVQUFBO0VBQ0Esa0JBQUE7RUFDQSxZQUFBO0FFSEo7QUZNRTtFQUNFLGVBQUE7RUFDQSwwQkFBQTtBRUpKO0FGT0U7RUFDRSxVQUFBO0VBQ0EsbUJBQUE7RUFDQSx5QkFBQTtLQUFBLHNCQUFBO01BQUEscUJBQUE7VUFBQSxpQkFBQTtFQUNBLHNFQUFBO1VBQUEsOERBQUE7QUVMSjtBRlFFO0VBQ0Usa0JBQUE7RUFDQSxXQUFBO0FFTko7QUZjQTtFQUNFLGNBQUE7RUFDQSw0QkFBQTtFQUFBLDZCQUFBO01BQUEsMEJBQUE7VUFBQSxzQkFBQTtFQUNBLHlCQUFBO01BQUEsc0JBQUE7VUFBQSxtQkFBQTtFQUNBLGdDQUFBO0FFWkY7O0FGZUE7RUFDRSxhQUFBO0VBQ0Esb0JBQUE7RUFDQSxvQkFBQTtFQUNBLGFBQUE7RUFDQSxnQkFBQTtFQUNBLGtCQUFBO0VBQ0EseUJBQUE7RUFDQSxnQ0FBQTtBRVpGIiwiZmlsZSI6InVwbG9hZEJ0bi5jc3MifQ== */

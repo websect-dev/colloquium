@@ -2,35 +2,11 @@ ul {
   width: 100%;
   margin: 0;
   padding: 0;
-  list-style-type: none; }
-
-a {
-  position: relative;
-  transition: clip-path 275ms cubic-bezier(0.4, 0.01, 0.165, 0.99); }
-  a:hover span::before, a:focus span::before {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-  a span {
-    position: relative;
-    display: inline-block;
-    color: #b1b1b1; }
-    a span::before {
-      position: absolute;
-      content: attr(data-content);
-      color: rgba(243, 62, 105, 0.85);
-      clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
-      transition: clip-path 500ms cubic-bezier(0.4, 0.01, 0.165, 0.99); }
-
-#dropdown {
-  overflow: hidden;
-  cursor: pointer; }
-
-.icon {
-  font-family: SF Pro Display, bold, sans-serif;
-  display: flex;
-  justify-content: space-around;
-  color: #f33e69; }
+  list-style-type: none;
+}
 
 #menu li {
+  transition: all 0.2s ease-in-out;
   font-family: SF Pro Display, bold, sans-serif;
   font-size: x-large;
   text-align: left;
@@ -39,12 +15,40 @@ a {
   padding: 0.5vw;
   border: none;
   position: relative;
-  outline: none; }
+  outline: none;
+}
+
+a {
+  position: relative;
+  transition: clip-path 275ms cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+a span {
+  position: relative;
+  display: inline-block;
+  color: #b1b1b1;
+}
+a span:hover {
+  color: #d2d2d2;
+}
+
+#dropdown {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.icon {
+  font-family: SF Pro Display, bold, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  color: #f33e69;
+}
 
 #dropdown.closed #menu {
-  height: 0; }
+  height: 0;
+}
 
 #dropdown.closed .icon span {
-  transform: rotate(180deg); }
+  transform: rotate(180deg);
+}
 
 /*# sourceMappingURL=dropDown.css.map */
