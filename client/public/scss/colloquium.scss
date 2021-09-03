@@ -1,0 +1,102 @@
+@import "constants";
+
+html, body {
+  overflow-y: hidden; // запрет скроллинга страницы
+}
+
+button, input[type="file"] {
+  border: none;
+  cursor: pointer;
+}
+
+#counter {
+  display: flex;
+  position: absolute;
+  left: 2rem;
+  top: 2.5rem;
+
+  @include regular-text;
+  font-size: 2rem;
+  color: #a0a0a0;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 1vh;
+  grid-template-rows: minmax(36vh, auto) minmax(36vh, auto) minmax(23vh, auto);
+
+  & #grid-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & h1 {
+      @include header;
+      text-align: center;
+      font-size: 3.5rem;
+      color: $black;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+  }
+
+  & #grid-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & h1 {
+      @include header;
+      font-size: 9rem;
+      color: $main-color;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    & h3 {
+      @include regular-text;
+      font-size: 1rem;
+      color: #848484;
+      margin-top: 0;
+      font-weight: 300;
+    }
+  }
+
+  & #grid-next-question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & #start-container {
+      & button {
+        background: $main-color;
+        height: 3rem;
+        border-radius: 7px;
+        text-decoration: none;
+        font-family: SF Pro Display, regular, monospace;
+        font-size: large;
+        color: white;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        @include animationHover;
+
+        &:hover {
+          background: $hover-go-color;
+        }
+      }
+    }
+  }
+}
+
+#back-home-btn {
+  display: flex;
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+}

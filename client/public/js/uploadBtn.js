@@ -29,34 +29,34 @@ const showStart = () => {
     console.log('showStart')
 }
 
-// let sendFiles = () => {
-//
-//     let maxFileSize = 5242880;
-//     let Data = new FormData();
-//
-//     console.log(files)
-//
-//     $(files).each((index, file) => {
-//         if ((file.size > maxFileSize) || ((file.type !== 'text/plain')))
-//             console.log('неверный формат')
-//
-//         Data.append('text', file);
-//         console.log(file)
-//     });
-//
-//     console.log(files)
-//
-//     $.ajax({
-//         url: dropZone.attr('action'),
-//         type: dropZone.attr('method'),
-//         data: Data,
-//         contentType: false,
-//         processData: false,
-//         success: (data) => {
-//             alert('Файлы были успешно загружены!');
-//         }
-//     });
-// }
+let sendFiles = (files) => {
+
+    let maxFileSize = 5242880;
+    let Data = new FormData();
+
+    console.log(files)
+
+    $(files).each((index, file) => {
+        if ((file.size > maxFileSize) || ((file.type !== 'text/plain')))
+            console.log('неверный формат')
+
+        Data.append('text', file);
+        console.log(file)
+    });
+
+    console.log(files)
+
+    $.ajax({
+        url: dropZone.attr('action'),
+        type: dropZone.attr('method'),
+        data: Data,
+        contentType: false,
+        processData: false,
+        success: (data) => {
+            alert('Файлы были успешно загружены!');
+        }
+    });
+}
 
 $(document).ready(() => {
 

@@ -38,6 +38,7 @@ input, label {
   font-size: medium;
   font-weight: lighter !important;
   color: #171717 !important;
+  margin-top: 0;
 }
 #grid-container #grid-footer {
   display: grid;
@@ -114,7 +115,7 @@ input, label {
 }
 #grid-main-content #start-container button {
   width: 10rem;
-  background: #f33e69;
+  background: #f33e68;
   height: 3rem;
   border-radius: 7px;
   text-decoration: none;

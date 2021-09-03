@@ -40,7 +40,7 @@ a span:hover {
   font-family: SF Pro Display, bold, sans-serif;
   display: flex;
   justify-content: space-around;
-  color: #f33e69;
+  color: #f33e68;
 }
 
 #dropdown.closed #menu {

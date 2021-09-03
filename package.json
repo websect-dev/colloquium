@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/app.js",
     "server": "nodemon server/app.js",
-    "prefix": "postcss ./client/public/temp-css/main.css ./client/public/temp-css/preloader.css ./client/public/temp-css/notification.css ./client/public/temp-css/uploadBtn.css ./client/public/temp-css/dark.css ./client/public/temp-css/dropDown.css ./client/public/temp-css/light.css ./client/public/temp-css/about.css ./client/public/temp-css/media.css --use autoprefixer -d ./client/public/css/",
+    "prefix": "postcss ./client/public/temp-css/main.css ./client/public/temp-css/colloquium.css ./client/public/temp-css/preloader.css ./client/public/temp-css/notification.css ./client/public/temp-css/uploadBtn.css ./client/public/temp-css/dark.css ./client/public/temp-css/dropDown.css ./client/public/temp-css/light.css ./client/public/temp-css/about.css ./client/public/temp-css/media.css --use autoprefixer -d ./client/public/css/",
     "run": "concurrently \"npm run server\" \"npm run prefix\""
   },
   "keywords": [],

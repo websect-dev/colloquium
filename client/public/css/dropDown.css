@@ -49,7 +49,7 @@ a span:hover {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  color: #f33e69;
+  color: #f33e68;
 }
 
 #dropdown.closed #menu {

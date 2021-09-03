@@ -6,11 +6,49 @@
 
     <!--Иконка сайта во вкладках-->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/colloquium.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="//db.onlinewebfonts.com/c/3cff9206b4c8d578245ef1aaeeaf9e84?family=SF+Pro+Display" rel="stylesheet"
+          type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
-    <h1>Коллок</h1>
+    <a href="/" id="back-home-btn">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.8836 13.0995L13.1128 20.8703" stroke="#171717" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20.8862 20.875L13.1089 13.0961" stroke="#171717" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0281 2H9.97027C5.07135 2 2 5.46865 2 10.3773V23.6227C2 28.5314 5.05676 32 9.97027 32H24.0265C28.9416 32 32 28.5314 32 23.6227V10.3773C32 5.46865 28.9416 2 24.0281 2Z" stroke="#171717" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+
+    <h2 id="counter">0/40</h2>
+
+    <div id="grid-container">
+
+        <div id="grid-header">
+            <h1>Готов?</h1>
+        </div>
+
+        <div id="grid-main-content">
+
+            <h1>10</h1>
+
+            <h3>секунд осталось</h3>
+        </div>
+
+        <div id="grid-next-question">
+            <div id="start-container">
+                <button id="next-question">Конечно!</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/colloquium.js"></script>
 
 </body>
 </html>

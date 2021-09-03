@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="" id="dragFileForm">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/dropDown.css">
     <link rel="stylesheet" href="css/uploadBtn.css">
@@ -58,18 +57,13 @@
 
                 <ul id="menu">
                     <li>
-                        <a href="#">
-                            <span>Линейная алгебра</span>
-                        </a>
+                        <a href="#" onclick="currentSubject = `linAl`"><span>Линейная алгебра</span></a>
                     </li>
                     <li>
-                        <a href="#">
-                            <span>Математический анализ</span>
-                        </a>
+                        <a href="#" onclick="currentSubject = `math`"><span>Математический анализ</span></a>
                     </li>
                     <li>
-                        <a href="#"><span>Очень важный предмет</span>
-                        </a>
+                        <a href="#" onclick="currentSubject = `subeSubj`"><span>Очень важный предмет</span></a>
                     </li>
                     <li id="menu-square"><a href="/subjects">
                         <svg width="23" height="23" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,8 +86,8 @@
                 <form id="upload-btn" method="POST">
                     <div>
                         <input id="file-input" type="file" name="file">
-                        <label id="upload-label" for="file-input" onclick="setTimeout(() => showNotification(), 3000)">Загрузить</label>
-                        <span id="upload-span" style="display: none">можете перетащить файл сюда, и появится окно для загрузки файлов</span>
+                        <label id="upload-label" for="file-input">Загрузить</label>
+                        <span id="upload-span" style="display: none">можете перетащить файл сюда</span>
                     </div>
                 </form>
             </div>
@@ -114,29 +108,6 @@
 
     </div>
 
-    <div id="file-upload__modal" style="display: none">
-        <div id="file-upload__content">
-            <h1 class="file-upload__content-title" role="heading">Загрузить файл</h1>
-            <p class="file-upload__error" role="alertdialog"></p>
-            <ul class="file__list js-file__list" role="list"></ul>
-
-            <form class="file-upload__form js-dropzone" role="form">
-                <input
-                        type="file"
-                        id="file-dropzone"
-                        class="file__input js-file__input"
-                        multiple
-                >
-                <label
-                        class="file__input-label"
-                        for="file-dropzone"
-                >Перетащите файл или нажмите
-                    <button class="file__input-label-button" role="button">загрузить</button>
-                </label>
-            </form>
-        </div>
-    </div>
-
     <div class="container notification" style="display: none">
         <div class="rectangle">
             <div class="notification-text">
@@ -150,7 +121,6 @@
     <script src="js/theme.js"></script>
     <script src="js/uploadBtn.js"></script>
     <script src="js/dropDown.js"></script>
-    <script src="js/dragFile.js"></script>
     <script src="js/notification.js"></script>
 </body>
 </html>
