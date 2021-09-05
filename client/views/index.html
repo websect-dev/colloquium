@@ -8,11 +8,14 @@
     <title>Коллоквиум</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/preloader.css">
     <link rel="stylesheet" href="css/dropDown.css">
-    <link rel="stylesheet" type="text/css" href="css/light.css" id="theme-link">
+    <link rel="stylesheet" href="css/uploadBtn.css">
+    <link rel="stylesheet" href="css/notification.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" type="text/css" href="css/light.css" id="theme-link">
+
     <link href="//db.onlinewebfonts.com/c/3cff9206b4c8d578245ef1aaeeaf9e84?family=SF+Pro+Display" rel="stylesheet"
           type="text/css"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -22,18 +25,20 @@
 
 </head>
 <body>
+
+    <div id="change-theme">
+        <span id="theme-text">Тёмная тема</span>
+        <!-- Rounded switch -->
+        <label class="switch" id="theme-button" onclick="changeTheme();">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
     <div id="grid-container">
         <div class="grid-header">
             <header>
                 Добро пожаловать в <br> систему коллоквиумов ИТМО ✌️
-                <div id="change-theme">
-                    <span id="theme-text">Тёмная тема</span>
-                    <!-- Rounded switch -->
-                    <label class="switch" id="theme-button" onclick="changeTheme();">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
                 <img id="mobile-change-theme"
                      src="assets/img/dark-moon.svg"
                      alt="Change theme"
@@ -44,7 +49,7 @@
 
         <div id="grid-main-content">
             <div id="dropdown" class="closed">
-                <h1>Дискретная математика
+                <h1><span id="header-text"></span>
                     <svg id="arrow" width="42" height="25"
                          viewBox="0 0 42 25" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
@@ -54,18 +59,13 @@
 
                 <ul id="menu">
                     <li>
-                        <a href="#">
-                            <span data-content="Линейная алгебра">Линейная алгебра</span>
-                        </a>
+                        <a href="#" onclick="localStorage.setItem('curSubject', 'Линейная алгебра')"><span>Линейная алгебра</span></a>
                     </li>
                     <li>
-                        <a href="#">
-                            <span data-content="Математический анализ">Математический анализ</span>
-                        </a>
+                        <a href="#" onclick="localStorage.setItem('curSubject', 'Математический анализ')"><span>Математический анализ</span></a>
                     </li>
                     <li>
-                        <a href="#"><span data-content="Очень важный предмет">Очень важный предмет</span>
-                        </a>
+                        <a href="#" onclick="localStorage.setItem('curSubject', 'Дискретная математика')"><span>Дискретная математика</span></a>
                     </li>
                     <li id="menu-square"><a href="/subjects">
                         <svg width="23" height="23" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,10 +85,17 @@
             <div id="additional-container">
                 <h2>или можете загрузить свой файл...</h2>
 
-                <label id="upload-btn">
-                    <input type="file"/>
-                    Загрузить
-                </label>
+                <form id="upload-btn" method="POST">
+                    <div>
+                        <input id="file-input" type="file" name="file">
+                        <label id="upload-label" for="file-input">Загрузить</label>
+                        <span id="upload-span" style="display: none">можете перетащить файл сюда</span>
+                    </div>
+                </form>
+
+<!--                <div id="hidden-block">-->
+<!--                    Можете перетащить сюда файл, и будет красиво :)-->
+<!--                </div>-->
             </div>
         </div>
         <div id="grid-footer">
@@ -107,20 +114,19 @@
 
     </div>
 
-    <div class="preloader">
-        <svg viewBox="-2000 -1000 4000 2000">
-            <path id="inf" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
-            <use xlink:href="#inf" stroke-dasharray="1570 5143" stroke-dashoffset="6713px"></use>
-        </svg>
+    <div id="container" class="notification" style="display: none">
+        <div id="rectangle">
+            <div id="notification-text">
+                <span></span>
+            </div>
+        </div>
     </div>
 
-    <script>
-        window.onload = () => {
-            document.querySelector('.preloader').classList.add("preloader-remove")
-        }
-    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    <script src="js/theme.js"></script>
     <script src="js/dropDown.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/uploadBtn.js"></script>
+    <script src="js/notification.js"></script>
 </body>
 </html>

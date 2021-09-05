@@ -2,11 +2,15 @@ body {
   background: #171717;
 }
 
+#change-theme {
+  color: rgba(255, 255, 255, 0.62);
+}
+
 #grid-container .grid-header header {
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.62);
 }
 #grid-container .grid-header h3 {
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: rgba(255, 255, 255, 0.62) !important;
 }
 
 button, input[type=file] {
@@ -20,7 +24,7 @@ button, input[type=file] {
   background: #1E1E1E;
 }
 #dropdown h1 {
-  color: #f33e69;
+  color: #f33e68;
 }
 
 #additional-container h2 {
@@ -63,11 +67,11 @@ footer #footer__img-container a:hover {
 }
 
 input:checked + .slider {
-  background-color: #f33e69;
+  background-color: #f33e68;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #f33e69;
+  box-shadow: 0 0 1px #f33e68;
 }
 
 /*# sourceMappingURL=dark.css.map */

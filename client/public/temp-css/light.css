@@ -1,53 +1,77 @@
 body {
-  background: white; }
+  background: white;
+}
+
+#change-theme {
+  color: #171717;
+}
 
 #grid-container .grid-header header {
-  color: #171717; }
+  color: #171717;
+}
 #grid-container .grid-header h3 {
-  color: #171717; }
+  color: #171717;
+}
 
-button, input[type="file"] {
-  box-shadow: 0px 4px 40px rgba(185, 185, 185, 0.5); }
+button, input[type=file] {
+  box-shadow: 0px 4px 40px rgba(185, 185, 185, 0.5);
+}
 
 #dropdown {
-  box-shadow: 0px 4px 40px rgba(185, 185, 185, 0.5); }
-  #dropdown:hover {
-    background: #F5F5F5; }
-  #dropdown h1 {
-    color: #f33e69; }
+  box-shadow: 0px 4px 40px rgba(185, 185, 185, 0.5);
+}
+#dropdown:hover {
+  background: #F5F5F5;
+}
+#dropdown h1 {
+  color: #f33e68;
+}
 
 #additional-container h2 {
-  color: #CACACA; }
+  color: #CACACA;
+}
 #additional-container #upload-btn {
   box-shadow: 0px 4px 40px rgba(185, 185, 185, 0.5);
-  transition: all 200ms cubic-bezier(0.4, 0.01, 0.165, 0.99); }
-  #additional-container #upload-btn:hover {
-    background: #f3f3f3; }
+  transition: all 200ms cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+#additional-container #upload-btn:hover {
+  background: #f3f3f3;
+}
 
 footer {
-  box-shadow: 0px 4px 40px rgba(185, 185, 185, 0.5); }
-  footer #footer__text-container a {
-    color: #CACACA; }
-    footer #footer__text-container a:hover {
-      color: #656565; }
-  footer #footer__img-container a:nth-child(1) {
-    background-color: #CACACA; }
-  footer #footer__img-container a:nth-child(2) {
-    background-color: #CACACA; }
-  footer #footer__img-container a:hover {
-    background-color: #656565; }
+  box-shadow: 0px 4px 40px rgba(185, 185, 185, 0.5);
+}
+footer #footer__text-container a {
+  color: #CACACA;
+}
+footer #footer__text-container a:hover {
+  color: #656565;
+}
+footer #footer__img-container a:nth-child(1) {
+  background-color: #CACACA;
+}
+footer #footer__img-container a:nth-child(2) {
+  background-color: #CACACA;
+}
+footer #footer__img-container a:hover {
+  background-color: #656565;
+}
 
 /* The slider */
 .slider {
-  background-color: #ccc; }
+  background-color: #ccc;
+}
 
 .slider:before {
-  background-color: white; }
+  background-color: white;
+}
 
 input:checked + .slider {
-  background-color: #f33e69; }
+  background-color: #f33e68;
+}
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #f33e69; }
+  box-shadow: 0 0 1px #f33e68;
+}
 
 /*# sourceMappingURL=light.css.map */

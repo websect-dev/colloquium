@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/app.js",
     "server": "nodemon server/app.js",
-    "prefix": "postcss ./client/public/temp-css/main.css ./client/public/temp-css/dark.css ./client/public/temp-css/dropDown.css ./client/public/temp-css/light.css ./client/public/temp-css/about.css ./client/public/temp-css/media.css --use autoprefixer -d ./client/public/css/",
+    "prefix": "postcss ./client/public/temp-css/main.css ./client/public/temp-css/colloquium.css ./client/public/temp-css/preloader.css ./client/public/temp-css/notification.css ./client/public/temp-css/uploadBtn.css ./client/public/temp-css/dark.css ./client/public/temp-css/dropDown.css ./client/public/temp-css/light.css ./client/public/temp-css/about.css ./client/public/temp-css/media.css --use autoprefixer -d ./client/public/css/",
     "run": "concurrently \"npm run server\" \"npm run prefix\""
   },
   "keywords": [],
@@ -14,13 +14,18 @@
   "license": "ISC",
   "browserslist": "last 4 versions",
   "dependencies": {
+    "autoprefixer": "^10.3.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jquery": "^3.6.0",
+    "postcss-cli": "^8.3.1",
+    "sass": "^1.39.0",
     "scss": "^0.2.4",
     "three": "^0.131.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12",
+    "postcss": "^8.3.6"
   }
 }
