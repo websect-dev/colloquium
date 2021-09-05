@@ -4,6 +4,11 @@ body {
   background: $black;
 }
 
+#change-theme {
+  color: $white;
+}
+
+
 #grid-container {
 
   & .grid-header {

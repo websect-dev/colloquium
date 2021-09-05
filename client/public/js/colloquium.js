@@ -4,7 +4,7 @@ const questionCounter = document.getElementById("counter")
 const timerButton = document.querySelector("#grid-container #grid-main-content h1")
 const timerText = document.querySelector("#grid-container #grid-main-content h3")
 
-let currentSubject = `diskMath`
+// let currentSubject = subjects['diskMath']
 
 const diskMath =
     [
@@ -26,26 +26,43 @@ const diskMath =
 
 const linAl =
     [
-        "Вопрос 1", "Вопрос 2", "Вопрос 3", "Вопрос 4",
-        "Вопрос 5", "Вопрос 6", "Вопрос 7", "Вопрос 8",
-        "Вопрос 9", "Вопрос 10", "Вопрос 11", "Вопрос 12",
-        "Вопрос 13", "Вопрос 14", "Вопрос 15", "Вопрос 16",
-        "Вопрос 17", "Вопрос 18", "Вопрос 19", "Вопрос 20"
+        "Линал", "Линал 1", "Линал 2", "Линал 3", "Линал 4", "Линал 5", "Линал 6",
+        "Линал 7", "Линал 8", "Линал 9", "Линал 10", "Линал 11", "Линал 12", "Линал 13"
     ]
 
-const subjects = {'diskMath': diskMath, 'linAl': linAl}
+const mathAnalysis =
+    [
+        "Матанализ 1", "Матанализ 2", "Матанализ 3", "Матанализ 4", "Матанализ 5",
+        "Матанализ 6", "Матанализ 7", "Матанализ 8", "Матанализ 9", "Матанализ 10",
+        "Матанализ 11", "Матанализ 12", "Матанализ 13", "Матанализ 14", "Матанализ 15",
+        "Матанализ 16", "Матанализ 17", "Матанализ 18", "Матанализ 19", "Матанализ 20"
+    ]
+
+const subjects = {'Дискретная математика': diskMath, 'Линейная алгебра': linAl, 'Математический анализ': mathAnalysis, 'Загруженный файл': localStorage.getItem('curQuestions').split('#,')}
 
 const shuffle = (array) => {
     array.sort(() => Math.random() - 0.5);
 }
 
+let idx
+
 startButton.addEventListener('click', () => {
+    startButton.setAttribute('style', 'background: #C8234A') // имитируем нажатие кнопки цветом
+
+    setTimeout(() => startButton.removeAttribute('style'), 250)
+
+    let questionsArray = subjects[localStorage.getItem('curSubject')]
+
+
     if (["Готов?", "Вопросы закончились. Ещё раз?"].includes(questionText.textContent)) {
-        shuffle(diskMath)
-        questionText.textContent = diskMath[0]
+        idx = 0
+        console.log(questionsArray.join("\n"))
+        shuffle(questionsArray)
+        console.log(questionsArray.join("\n"))
+        questionText.textContent = questionsArray[idx]
         questionText.setAttribute("style", "color: #171717!important")
 
-        questionCounter.textContent = `1/${diskMath.length}`
+        questionCounter.textContent = `${++idx}/${questionsArray.length}`
 
         startButton.textContent = "Следующий вопрос!"
         timerText.textContent = `секунд осталось`
@@ -55,12 +72,12 @@ startButton.addEventListener('click', () => {
         return;
     }
 
-    const idx = diskMath.indexOf(questionText.textContent)
-
-    if (idx + 1 < diskMath.length) {
-        questionText.textContent = diskMath[idx + 1]
+    if (idx < questionsArray.length) {
+        console.log(`idx: ${idx + 1} <--> ${questionsArray[idx]}`)
+        questionText.textContent = questionsArray[idx]
         timerText.textContent = `секунд осталось`
-        questionCounter.textContent = `${idx + 2}/${diskMath.length}`
+        questionCounter.textContent = `${idx + 1}/${questionsArray.length}`
+        idx++;
         stop_timer()
         set_seconds(10)
         use_set_interval()

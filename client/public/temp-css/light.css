@@ -2,6 +2,10 @@ body {
   background: white;
 }
 
+#change-theme {
+  color: #171717;
+}
+
 #grid-container .grid-header header {
   color: #171717;
 }

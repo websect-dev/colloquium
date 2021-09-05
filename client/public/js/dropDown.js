@@ -25,6 +25,15 @@ document.getElementById("menu").addEventListener("click", (e) => {
         [e.target.innerText, headerText.textContent] = [headerText.textContent, e.target.innerText]
 });
 
+$(document).ready(() => {
+    if (localStorage.getItem('curSubject') === null)
+        localStorage.setItem('curSubject', 'Дискретная математика')
+
+    if (headerText.textContent !== localStorage.getItem('curSubject')) {
+        headerText.textContent = localStorage.getItem('curSubject')
+    }
+})
+
 // по наведению мыши
 /*
 dropdown.addEventListener('mouseenter', () => {
