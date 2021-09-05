@@ -2,16 +2,16 @@ html, body {
   height: 100%;
 }
 
-.container {
+#container {
   position: absolute;
-  right: 5vw;
-  top: 2vh;
+  right: 3rem;
+  top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.rectangle {
+#rectangle {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -27,7 +27,7 @@ html, body {
   animation: scale-in 0.3s ease-out forwards, expand 0.35s 0.25s ease-out forwards;
 }
 
-.notification-text {
+#notification-text {
   display: flex;
   align-items: center;
   padding: 0 16px;

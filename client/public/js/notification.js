@@ -1,4 +1,5 @@
 const notification = document.querySelector('.notification')
+const notificationText = document.querySelector('#notification-text')
 
 let fade = (element) => {
     let opacity = 1;  // initial opacity
@@ -13,7 +14,8 @@ let fade = (element) => {
     }, 12.5);
 }
 
-let showNotification = () => {
+let showNotification = (text) => {
     notification.removeAttribute('style')
+    notificationText.textContent = text
     setTimeout(() => fade(notification), 5000)
 }
