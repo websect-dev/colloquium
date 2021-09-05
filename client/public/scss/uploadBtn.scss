@@ -64,7 +64,7 @@
   display: block;
   flex-direction: column;
   align-items: center;
-  text-decoration: none!important;
+  text-decoration: none !important;
 }
 
 #upload-span {
@@ -77,3 +77,24 @@
   margin: 2rem 1rem -4.7rem;
   text-decoration: none !important;
 }
+
+// уточняющая информация при наведении курсора на загрузку файла
+
+//#hidden-block {
+//  @include regular-text;
+//  background: #efefef;
+//  color: $main-color;
+//  font-size: 0.7rem;
+//  padding: 0.5rem;
+//  margin-top: 1rem;
+//  border-radius: 8px;
+//  border: 0.1rem solid #a1a1a1;
+//  text-align: center;
+//  opacity: 0; /*Элемент полностью прозрачный (невидимый)*/
+//  transition: 0.5s; /*Скорость перехода состояния элемента*/
+//}
+//
+//#upload-btn:hover + #hidden-block {
+//  opacity: 1;
+//  transition: 0.5s;
+//}

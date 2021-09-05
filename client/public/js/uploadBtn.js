@@ -1,9 +1,9 @@
 const dropZone = $('#upload-btn');
 const dropZoneLink = document.querySelector('#upload-btn');
 const fileUploadContent = document.querySelector('#file-upload__content');
-const dragFileLink = document.querySelector("#dragFileForm");
 const uploadSpan = document.querySelector("#upload-span");
 const additionalContainerText = document.querySelector("#grid-main-content #additional-container h2");
+const inputElement = document.getElementById("file-input");
 
 const hideStart = () => {
 
@@ -29,12 +29,35 @@ const showStart = () => {
     console.log('showStart')
 }
 
+inputElement.addEventListener("change", handleFiles, false);
+function handleFiles() {
+    const fileList = this.files;
+    let text = fileList[0]
+
+    let fileReader = new FileReader();
+
+    fileReader.readAsText(text);
+
+    fileReader.onload = (event) => {
+        let arrayBuffer = fileReader.result;
+        localStorage.setItem('curSubject', 'Загруженный файл')
+        headerText.textContent = 'Загруженный файл'
+        let curQuestions = arrayBuffer.split('\n').map((str, index) => {
+            return (str[str.length - 1] === '.') ? str.trim() .slice(0, str.length - 1) + '#' : str.trim() + "#"
+        })
+
+        curQuestions[curQuestions.length - 1] = curQuestions[curQuestions.length - 1].slice(0, curQuestions[curQuestions.length - 1].length - 1)
+
+        localStorage.setItem('curQuestions', curQuestions.toString())
+    };
+}
+
 let sendFiles = (files) => {
 
     let maxFileSize = 5242880;
     let Data = new FormData();
 
-    console.log(files)
+    // console.log(files)
 
     $(files).each((index, file) => {
         if ((file.size > maxFileSize) || ((file.type !== 'text/plain')))
@@ -44,18 +67,18 @@ let sendFiles = (files) => {
         console.log(file)
     });
 
-    console.log(files)
+    // console.log(files)
 
-    $.ajax({
-        url: dropZone.attr('action'),
-        type: dropZone.attr('method'),
-        data: Data,
-        contentType: false,
-        processData: false,
-        success: (data) => {
-            alert('Файлы были успешно загружены!');
-        }
-    });
+    // $.ajax({
+    //     url: dropZone.attr('action'),
+    //     type: dropZone.attr('method'),
+    //     data: Data,
+    //     contentType: false,
+    //     processData: false,
+    //     success: (data) => {
+    //         alert('Файлы были успешно загружены!');
+    //     }
+    // });
 }
 
 $(document).ready(() => {
@@ -69,7 +92,7 @@ $(document).ready(() => {
         .change(() => {
             let files = this.files;
             sendFiles(files);
-            showNotification()
+            showNotification('Файл успешно обработан')
             showStart()
         })
 
@@ -103,7 +126,22 @@ $(document).ready(() => {
         let files = e.originalEvent.dataTransfer.files;
         console.log('drop')
         showStart()
-        showNotification()
+        showNotification('Файл успешно обработан')
+        getTxt()
         sendFiles(files);
     });
 })
+
+const getTxt = () => {
+
+    // fetch('file.txt')
+    //     .then(response => response.text())
+    //     .then(text => alert(text))
+
+    $.ajax({
+        url:'file.txt',
+        success: (data) => {
+            alert(data)
+        }
+    });
+}
