@@ -9,11 +9,13 @@
   align-items: center;
   justify-content: center;
   transition: all 0.5s;
-  opacity: 1; }
+  opacity: 1;
+}
 
 .preloader-remove {
   opacity: 0;
-  z-index: -10; }
+  z-index: -10;
+}
 
 .preloader svg {
   max-width: 25em;
@@ -22,14 +24,18 @@
   fill: none;
   stroke: #b1b1b1;
   stroke-linecap: round;
-  stroke-width: 12%; }
+  stroke-width: 12%;
+}
 
 .preloader use {
   stroke: #f33e69;
-  animation: preloader-a 0.5s linear infinite; }
+  animation: preloader-a 0.5s linear infinite;
+}
 
 @keyframes preloader-a {
   to {
-    stroke-dashoffset: 0px; } }
+    stroke-dashoffset: 0px;
+  }
+}
 
 /*# sourceMappingURL=preloader.css.map */
