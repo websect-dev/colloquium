@@ -56,7 +56,7 @@
     font-size: 4vw !important;
   }
 }
-@media screen and (max-height: 819px) {
+@media screen and (max-height: 700px) {
   #mobile-change-theme {
     display: -webkit-box;
     display: -ms-flexbox;

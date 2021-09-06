@@ -87,7 +87,7 @@
 
                 <form id="upload-btn" method="POST">
                     <div>
-                        <input id="file-input" type="file" name="file">
+                        <input id="file-input" type="file" name="file" onchange="handleFiles(this.files)">
                         <label id="upload-label" for="file-input">Загрузить</label>
                         <span id="upload-span" style="display: none">можете перетащить файл сюда</span>
                     </div>
