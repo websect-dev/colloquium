@@ -1,0 +1,260 @@
+@import "constants";
+
+html, body {
+  overflow-y: hidden; // запрет скроллинга страницы
+}
+
+input, label {
+  cursor: pointer;
+}
+
+::selection {
+  background: $selection-color;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 1vh;
+  grid-template-rows: minmax(25vh, auto) minmax(50vh, auto) minmax(20vh, auto);
+  z-index: 2;
+
+  & .grid-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    & header {
+      @include header;
+      white-space: nowrap;
+      text-align: center;
+      font-size: xx-large;
+      color: $black;
+    }
+
+    & h3 {
+      @include regular-text;
+      text-align: center;
+      font-size: medium;
+      font-weight: lighter !important;
+      color: $black !important;
+      margin-top: 0;
+    }
+  }
+
+  & #grid-footer {
+    display: grid;
+    align-items: flex-end;
+    justify-content: stretch;
+    padding-bottom: 3vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  & #grid-footer footer {
+    //margin-top: 5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    position: relative;
+    bottom: 0;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+
+
+    & #footer__text-container {
+      @include regular-text;
+      font-size: medium;
+      display: inline-flex;
+      align-items: center;
+
+      & a {
+        margin: 1vw 1vw 1vw 2vw;
+        white-space: nowrap;
+        text-decoration: none;
+        @include animationHover;
+      }
+    }
+
+    & #footer__img-container {
+      display: inline-flex;
+      align-items: center;
+
+      & a {
+        margin: 1vw 1vw 1vw 2vw;
+        width: 25px;
+        height: 25px;
+        @include animationHover;
+
+        &:nth-child(1) {
+          mask: url("../assets/img/instagram.svg") no-repeat center / contain;
+        }
+
+        &:nth-child(2) {
+          mask: url("../assets/img/github.svg") no-repeat center / contain;
+        }
+      }
+
+    }
+
+  }
+}
+
+#grid-main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  & #additional-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    & h2 {
+      @include regular-text;
+      font-size: small;
+      font-weight: 500;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      display: flex;
+      margin: 1rem;
+    }
+
+  }
+
+  & button, input[type="file"] {
+    border: none;
+    cursor: pointer;
+  }
+
+  #start-container {
+    & button {
+      width: 10rem;
+      background: $main-color;
+      height: 3rem;
+      border-radius: 7px;
+      text-decoration: none;
+      font-family: SF Pro Display, regular, monospace;
+      font-size: large;
+      color: white;
+      @include animationHover;
+
+      &:hover {
+        background: $hover-go-color;
+      }
+    }
+  }
+
+  & #dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 15px;
+    @include animationHover;
+
+    & h1 {
+      font-family: SF Pro Display, bold, sans-serif;
+      font-size: xx-large;
+      text-align: center;
+      margin: 1.5vh 1vw 1.5vh 2.5vw;
+      padding: 0.5vw;
+      display: flex;
+      align-items: center;
+    }
+
+    & #arrow {
+      width: 1.75rem;
+      height: 1.75rem;
+      margin-right: 2vw;
+      margin-left: 2vw;
+    }
+
+    & #menu-square {
+      border-top: solid 1px rgb(222, 222, 222);
+      display: flex;
+      justify-content: flex-end;
+      padding: 2vh 2vh 0.5vh;
+    }
+  }
+
+}
+
+#change-theme {
+  @include regular-text;
+  display: flex;
+  font-size: 1rem;
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+
+  align-items: center;
+}
+
+#mobile-change-theme {
+  height: auto;
+  position: absolute;
+  display: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 4rem;
+  height: 2.5rem;
+  margin: 0 1rem;
+
+  ///* Hide default HTML checkbox */
+  & switch input {
+    display: none;
+  }
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 1.9rem;
+    width: 1.9rem;
+    left: 0.2rem;
+    bottom: 0.3rem;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  /* Rounded sliders */
+  &.round {
+    border-radius: 100px;
+
+    &:before {
+      border-radius: 50%;
+    }
+  }
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}

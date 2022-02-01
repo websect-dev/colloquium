@@ -1,0 +1,97 @@
+@import "constants";
+
+body {
+  background: white;
+}
+
+#change-theme {
+  color: $black;
+}
+
+#grid-container {
+
+  & .grid-header {
+
+    & header {
+      color: $black;
+    }
+
+    & h3 {
+      color: $black;
+    }
+  }
+}
+
+button, input[type="file"] {
+  box-shadow: $light-shadow;
+}
+
+
+#dropdown {
+  box-shadow: $light-shadow;
+  &:hover {
+    background: $hover-dropdown-color;
+  }
+  & h1 {
+    color: $main-color;
+  }
+}
+
+#additional-container {
+  & h2 {
+    color: $inactive-color;
+  }
+
+  & #upload-btn {
+    box-shadow: $light-shadow;
+    @include animationHover;
+    &:hover {
+      background: #f3f3f3;
+    }
+  }
+}
+
+footer {
+  box-shadow: $light-shadow;
+
+  & #footer__text-container {
+    & a {
+      color: $inactive-color;
+      &:hover {
+        color: $inactive-hover-color;
+      }
+    }
+  }
+
+  & #footer__img-container a {
+    &:nth-child(1) {
+      background-color: $inactive-color;
+    }
+
+    &:nth-child(2) {
+      background-color: $inactive-color;
+    }
+
+    &:hover {
+      background-color: $inactive-hover-color;
+    }
+  }
+
+}
+
+/* The slider */
+.slider {
+  background-color: #ccc;
+}
+
+.slider:before {
+  background-color: white;
+}
+
+input:checked + .slider {
+  background-color: $main-color;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $main-color;
+}

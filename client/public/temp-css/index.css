@@ -1,0 +1,133 @@
+@import url(//db.onlinewebfonts.com/c/3cff9206b4c8d578245ef1aaeeaf9e84?family=SF+Pro+Display);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,80);
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("//db.onlinewebfonts.com/t/3cff9206b4c8d578245ef1aaeeaf9e84.eot");
+  src: url("//db.onlinewebfonts.com/t/3cff9206b4c8d578245ef1aaeeaf9e84.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/3cff9206b4c8d578245ef1aaeeaf9e84.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/3cff9206b4c8d578245ef1aaeeaf9e84.woff") format("woff"), url("//db.onlinewebfonts.com/t/3cff9206b4c8d578245ef1aaeeaf9e84.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/3cff9206b4c8d578245ef1aaeeaf9e84.svg#SF Pro Display") format("svg");
+}
+#header {
+  font-family: SF Pro Display, bold, sans-serif;
+  margin-top: 6rem;
+  text-align: center;
+}
+
+#guide {
+  font-family: Montserrat, thin, serif;
+  text-align: center;
+  margin: 3rem;
+}
+
+.subject_dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8rem auto 5rem;
+  width: 65rem;
+  height: 8rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#subject {
+  font-family: SF Pro Display, bold, sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  display: inline-block;
+  color: #F33E69;
+  margin: 0;
+}
+
+.start_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem;
+}
+
+#start_btn {
+  width: 25rem;
+  height: 5rem;
+  font-family: SF Pro Display, regular, monospace;
+  font-size: 25px;
+  color: white;
+  border-radius: 7px;
+  background: #F33E69;
+}
+
+#start_btn:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.footer {
+  width: 90%;
+  left: 5%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 1rem;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer_text_div {
+  font-family: Montserrat, thin, serif;
+  font-size: medium;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer_text {
+  color: gray;
+  margin: 1rem 1rem 1rem 2rem;
+}
+
+.footer_text:hover {
+  color: #b8b7b7;
+}
+
+#footer_img_div {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer_img {
+  margin: 1rem 1rem 1rem 2rem;
+}
+
+.footer_img:hover {
+  transform: translate(2.5%, -7.5%);
+}
+
+#additional_div {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+#additional_txt {
+  font-family: Montserrat, thin, serif;
+  font-size: small;
+  color: #CECECE;
+  align-items: center;
+  display: block;
+  margin: 2rem;
+}
+
+#upload_btn {
+  font-family: SF Pro Display, thin, monospace;
+  font-size: small;
+  display: block;
+  width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: none;
+  border-radius: 8px;
+  border-color: #F33E69;
+  color: #F33E69;
+}
+
+/*# sourceMappingURL=index.css.map */

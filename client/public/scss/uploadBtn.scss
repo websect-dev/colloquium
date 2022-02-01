@@ -1,0 +1,100 @@
+@import "constants";
+
+#upload-btn {
+  @include regular-text;
+  font-size: small;
+  width: 6rem;
+  height: 1.4rem;
+  margin-left: auto;
+  border: 4px solid $main-color;
+  color: $main-color;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  &.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30rem;
+    height: 15rem;
+    background-color: $very-light-main-color !important;
+    font-size: xx-large;
+    border: dashed;
+  }
+
+  & input[type="file"] {
+    // не display: none - потому что на старых браузерах это приведёт к багам
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    position: absolute;
+    z-index: -10;
+  }
+
+  & label:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  & img {
+    width: 40%;
+    margin-bottom: 20px;
+    user-select: none;
+    mask: url("../assets/img/upload.svg") no-repeat center/contain;
+  }
+
+  & div {
+    position: relative;
+    z-index: 10;
+  }
+
+  & .dragover {
+    //background-color: $inactive-dark-color;
+  }
+}
+
+#upload-label {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none !important;
+}
+
+#upload-span {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: large;
+  text-align: center;
+  margin: 2rem 1rem -4.7rem;
+  text-decoration: none !important;
+}
+
+// уточняющая информация при наведении курсора на загрузку файла
+
+//#hidden-block {
+//  @include regular-text;
+//  background: #efefef;
+//  color: $main-color;
+//  font-size: 0.7rem;
+//  padding: 0.5rem;
+//  margin-top: 1rem;
+//  border-radius: 8px;
+//  border: 0.1rem solid #a1a1a1;
+//  text-align: center;
+//  opacity: 0; /*Элемент полностью прозрачный (невидимый)*/
+//  transition: 0.5s; /*Скорость перехода состояния элемента*/
+//}
+//
+//#upload-btn:hover + #hidden-block {
+//  opacity: 1;
+//  transition: 0.5s;
+//}

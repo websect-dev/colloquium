@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="dark light">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Коллоквиум</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dropDown.css">
+    <link rel="stylesheet" href="css/uploadBtn.css">
+    <link rel="stylesheet" href="css/notification.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" type="text/css" href="css/light.css" id="theme-link">
+
+    <link href="//db.onlinewebfonts.com/c/3cff9206b4c8d578245ef1aaeeaf9e84?family=SF+Pro+Display" rel="stylesheet"
+          type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!--Иконка сайта во вкладках-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+    <div id="change-theme">
+        <span id="theme-text">Тёмная тема</span>
+        <!-- Rounded switch -->
+        <label class="switch" id="theme-button" onclick="changeTheme();">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <div id="grid-container">
+        <div class="grid-header">
+            <header>
+                Добро пожаловать в <br> систему коллоквиумов ИТМО ✌️
+                <img id="mobile-change-theme"
+                     src="assets/img/dark-moon.svg"
+                     alt="Change theme"
+                     onclick="changeMoonTheme();">
+            </header>
+            <h3>Чтобы начать штудирование, выберите предмет</h3>
+        </div>
+
+        <div id="grid-main-content">
+            <div id="dropdown" class="closed">
+                <h1><span id="header-text"></span>
+                    <svg id="arrow" width="42" height="25"
+                         viewBox="0 0 42 25" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M39 22L21.439 5L3 22" stroke="#E61E4E" stroke-width="7"/>
+                    </svg>
+                </h1>
+
+                <ul id="menu">
+                    <li>
+                        <a href="#" onclick="localStorage.setItem('curSubject', 'Линейная алгебра')"><span>Линейная алгебра</span></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="localStorage.setItem('curSubject', 'Математический анализ')"><span>Математический анализ</span></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="localStorage.setItem('curSubject', 'Дискретная математика')"><span>Дискретная математика</span></a>
+                    </li>
+                    <li id="menu-square"><a href="/subjects">
+                        <svg width="23" height="23" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0H12.5V5H5V12.5H0V0ZM22.5 0H35V12.5H30V5H22.5V0ZM30 22.5H35V35H22.5V30H30V22.5ZM12.5 30V35H0V22.5H5V30H12.5Z"
+                                  fill="#E61E4E"/>
+                        </svg>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div id="start-container">
+                <a href="/colloquium">
+                    <button>Поехали!</button>
+                </a>
+            </div>
+
+            <div id="additional-container">
+                <h2>или можете загрузить свой файл...</h2>
+
+                <form id="upload-btn" method="POST">
+                    <div>
+                        <input id="file-input" type="file" name="file" onchange="handleFiles(this.files)">
+                        <label id="upload-label" for="file-input">Загрузить</label>
+                        <span id="upload-span" style="display: none">можете перетащить файл сюда</span>
+                    </div>
+                </form>
+
+<!--                <div id="hidden-block">-->
+<!--                    Можете перетащить сюда файл, и будет красиво :)-->
+<!--                </div>-->
+            </div>
+        </div>
+        <div id="grid-footer">
+            <footer>
+                <div id="footer__text-container">
+                    <a href="/about">О нас</a>
+                    <a href="#">Отзыв</a>
+                </div>
+
+                <div id="footer__img-container">
+                    <a href="https://www.instagram.com/itmoru/" target="_blank"></a>
+                    <a href="https://github.com/websect-itmo" target="_blank"></a>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <div id="container" class="notification" style="display: none">
+        <div id="rectangle">
+            <div id="notification-text">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="js/dropDown.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/uploadBtn.js"></script>
+    <script src="js/notification.js"></script>
+</body>
+</html>

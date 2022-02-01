@@ -1,0 +1,95 @@
+@import "constants";
+
+body {
+  background: $black;
+}
+
+#change-theme {
+  color: $white;
+}
+
+
+#grid-container {
+
+  & .grid-header {
+
+    & header {
+      color: $white;
+    }
+
+    & h3 {
+      color: $white!important;
+    }
+  }
+}
+
+button, input[type="file"] {
+  box-shadow: $dark-shadow;
+}
+
+#dropdown {
+  box-shadow: $dark-shadow;
+  &:hover {
+    background: $hover-dropdown-dark-color;
+  }
+  & h1 {
+    color: $main-color;
+  }
+}
+
+#additional-container {
+  & h2 {
+    color: $inactive-dark-color;
+  }
+
+  & #upload-btn {
+    box-shadow: $big-dark-shadow;
+    @include animationHover;
+    &:hover {
+      background: #333333;
+    }
+  }
+}
+
+footer {
+  box-shadow: $big-dark-shadow;
+  & #footer__text-container {
+    & a {
+      color: $inactive-dark-color;
+      &:hover {
+        color: $inactive-color;
+      }
+    }
+  }
+
+  & #footer__img-container a {
+    &:nth-child(1) {
+      background-color: $inactive-dark-color;
+    }
+
+    &:nth-child(2) {
+      background-color: $inactive-dark-color;
+    }
+
+    &:hover {
+      background-color: $inactive-color;
+    }
+  }
+}
+
+/* The slider */
+.slider {
+  background-color: #ccc;
+}
+
+.slider:before {
+  background-color: white;
+}
+
+input:checked + .slider {
+  background-color: $main-color;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $main-color;
+}
